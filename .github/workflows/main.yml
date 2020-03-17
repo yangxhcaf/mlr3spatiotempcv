@@ -116,7 +116,6 @@ jobs:
         if: runner.os == 'macOS' && matrix.config.r == 'devel'
         run: |
           brew install ccache geos udunits Caskroom/cask/xquartz freetype pkg-config
-          brew unlink proj
           brew tap osgeo/osgeo4mac
           brew install osgeo-proj@5 osgeo-gdal
           brew link --force osgeo-proj@5
