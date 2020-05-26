@@ -162,7 +162,10 @@ not used as features. This can be changed by setting <code>coords_as_features = 
 
     <div class='dont-index'><p>Example spatial classification task: <code><a href='mlr_tasks_ecuador.html'>ecuador</a></code>.</p>
 <p>Other Task: 
-<code><a href='TaskRegrST.html'>TaskRegrST</a></code></p></div>
+<code><a href='TaskRegrST.html'>TaskRegrST</a></code>,
+<code><a href='mlr_tasks_cookfarm.html'>mlr_tasks_cookfarm</a></code>,
+<code><a href='mlr_tasks_diplodia.html'>mlr_tasks_diplodia</a></code>,
+<code><a href='mlr_tasks_ecuador.html'>mlr_tasks_ecuador</a></code></p></div>
     <h2 class="hasAnchor" id="super-classes"><a class="anchor" href="#super-classes"></a>Super classes</h2>
 
     <p><code><a href='https://mlr3.mlr-org.com/reference/Task.html'>mlr3::Task</a></code> -&gt; <code><a href='https://mlr3.mlr-org.com/reference/TaskSupervised.html'>mlr3::TaskSupervised</a></code> -&gt; <code><a href='https://mlr3.mlr-org.com/reference/TaskClassif.html'>mlr3::TaskClassif</a></code> -&gt; <code>TaskClassifST</code></p>
@@ -190,8 +193,6 @@ The <code>proj4string</code> of the coordinate system.</p></dd>
 <p><details ><summary>Inherited methods</summary>
 <ul>
 <li><p><span class="pkg-link" data-pkg="mlr3" data-topic="Task" data-id="cbind"><a href='../../mlr3/html/Task.html#method-cbind'><code>mlr3::Task$cbind()</code></a></span></p></li>
-<li><p><span class="pkg-link" data-pkg="mlr3" data-topic="Task" data-id="data"><a href='../../mlr3/html/Task.html#method-data'><code>mlr3::Task$data()</code></a></span></p></li>
-<li><p><span class="pkg-link" data-pkg="mlr3" data-topic="Task" data-id="droplevels"><a href='../../mlr3/html/Task.html#method-droplevels'><code>mlr3::Task$droplevels()</code></a></span></p></li>
 <li><p><span class="pkg-link" data-pkg="mlr3" data-topic="Task" data-id="filter"><a href='../../mlr3/html/Task.html#method-filter'><code>mlr3::Task$filter()</code></a></span></p></li>
 <li><p><span class="pkg-link" data-pkg="mlr3" data-topic="Task" data-id="format"><a href='../../mlr3/html/Task.html#method-format'><code>mlr3::Task$format()</code></a></span></p></li>
 <li><p><span class="pkg-link" data-pkg="mlr3" data-topic="Task" data-id="formula"><a href='../../mlr3/html/Task.html#method-formula'><code>mlr3::Task$formula()</code></a></span></p></li>
@@ -204,6 +205,8 @@ The <code>proj4string</code> of the coordinate system.</p></dd>
 <li><p><span class="pkg-link" data-pkg="mlr3" data-topic="Task" data-id="select"><a href='../../mlr3/html/Task.html#method-select'><code>mlr3::Task$select()</code></a></span></p></li>
 <li><p><span class="pkg-link" data-pkg="mlr3" data-topic="Task" data-id="set_col_role"><a href='../../mlr3/html/Task.html#method-set_col_role'><code>mlr3::Task$set_col_role()</code></a></span></p></li>
 <li><p><span class="pkg-link" data-pkg="mlr3" data-topic="Task" data-id="set_row_role"><a href='../../mlr3/html/Task.html#method-set_row_role'><code>mlr3::Task$set_row_role()</code></a></span></p></li>
+<li><p><span class="pkg-link" data-pkg="mlr3" data-topic="TaskClassif" data-id="data"><a href='../../mlr3/html/TaskClassif.html#method-data'><code>mlr3::TaskClassif$data()</code></a></span></p></li>
+<li><p><span class="pkg-link" data-pkg="mlr3" data-topic="TaskClassif" data-id="droplevels"><a href='../../mlr3/html/TaskClassif.html#method-droplevels'><code>mlr3::TaskClassif$droplevels()</code></a></span></p></li>
 <li><p><span class="pkg-link" data-pkg="mlr3" data-topic="TaskClassif" data-id="truth"><a href='../../mlr3/html/TaskClassif.html#method-truth'><code>mlr3::TaskClassif$truth()</code></a></span></p></li>
 </ul>
 </details>
@@ -286,8 +289,10 @@ The variables names of the coordinates in the data.</p></dd>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='no'>data</span> <span class='kw'>=</span> <span class='kw pkg'>data.table</span><span class='kw ns'>::</span><span class='fu'><a href='https://Rdatatable.gitlab.io/data.table/reference/as.data.table.html'>as.data.table</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/readRDS.html'>readRDS</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"extdata"</span>,
-  <span class='st'>"ecuador.rda"</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"mlr3spatiotempcv"</span>)))
-<span class='no'>task</span> <span class='kw'>=</span> <span class='no'>TaskClassifST</span>$<span class='fu'>new</span>(<span class='st'>"ecuador"</span>, <span class='kw'>backend</span> <span class='kw'>=</span> <span class='no'>data</span>, <span class='kw'>target</span> <span class='kw'>=</span> <span class='st'>"slides"</span>,
+  <span class='st'>"ecuador.rda"</span>,
+  <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"mlr3spatiotempcv"</span>)))
+<span class='no'>task</span> <span class='kw'>=</span> <span class='no'>TaskClassifST</span>$<span class='fu'>new</span>(<span class='st'>"ecuador"</span>,
+  <span class='kw'>backend</span> <span class='kw'>=</span> <span class='no'>data</span>, <span class='kw'>target</span> <span class='kw'>=</span> <span class='st'>"slides"</span>,
   <span class='kw'>positive</span> <span class='kw'>=</span> <span class='st'>"TRUE"</span>, <span class='kw'>coordinate_names</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"x"</span>, <span class='st'>"y"</span>))
 
 <span class='no'>task</span>$<span class='no'>task_type</span></div><div class='output co'>#&gt; [1] "classif"</div><div class='input'><span class='no'>task</span>$<span class='fu'><a href='https://rdrr.io/r/stats/formula.html'>formula</a></span>()</div><div class='output co'>#&gt; slides ~ .

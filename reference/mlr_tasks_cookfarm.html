@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • mlr3spatiotempcv</title>
+<title>Cookfarm Profiles Regression Task — mlr_tasks_cookfarm • mlr3spatiotempcv</title>
 
 
 <!-- jquery -->
@@ -40,7 +40,16 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Cookfarm Profiles Regression Task — mlr_tasks_cookfarm" />
+<meta property="og:description" content="The R.J. Cook Agronomy Farm (cookfarm) is a Long-Term Agroecosystem Research
+Site operated by Washington State University, located near Pullman,
+Washington, USA. Contains spatio-temporal (3D+T) measurements of three soil
+properties and a number of spatial and temporal regression covariates.
+Here, only the &quot;Profiles&quot; dataset is used from the collection.
+The Date column was appended from the readings dataset.
+500 random samples were drawn from the complete sample.
+See GSIF::cookfarm for more detailed information." />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -59,7 +68,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -133,114 +142,59 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Cookfarm Profiles Regression Task</h1>
+    <small class="dont-index">Source: <a href='https://github.com/mlr-org/mlr3spatiotempcv/blob/master/R/Task_regr_cookfarm_profiles.R'><code>R/Task_regr_cookfarm_profiles.R</code></a></small>
+    <div class="hidden name"><code>mlr_tasks_cookfarm.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>The R.J. Cook Agronomy Farm (cookfarm) is a Long-Term Agroecosystem Research
+Site operated by Washington State University, located near Pullman,
+Washington, USA. Contains spatio-temporal (3D+T) measurements of three soil
+properties and a number of spatial and temporal regression covariates.</p>
+<p>Here, only the "Profiles" dataset is used from the collection.
+The <code>Date</code> column was appended from the <code>readings</code> dataset.
+500 random samples were drawn from the complete sample.</p>
+<p>See GSIF::cookfarm for more detailed information.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="ResamplingRepeatedSpCVBlock.html">ResamplingRepeatedSpCVBlock</a></code> </p>
-        </td>
-        <td><p>Repeated Spatial Cross Validation Resampling</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="ResamplingRepeatedSpCVCoords.html">ResamplingRepeatedSpCVCoords</a></code> </p>
-        </td>
-        <td><p>Repeated Spatial Cross Validation Resampling</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="ResamplingRepeatedSpCVEnv.html">ResamplingRepeatedSpCVEnv</a></code> </p>
-        </td>
-        <td><p>Repeated Environmental Block Cross Validation Resampling</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="ResamplingSpCVBlock.html">ResamplingSpCVBlock</a></code> </p>
-        </td>
-        <td><p>Spatial Block Cross Validation Resampling</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="ResamplingSpCVBuffer.html">ResamplingSpCVBuffer</a></code> </p>
-        </td>
-        <td><p>Spatial Buffer Cross Validation Resampling</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="ResamplingSpCVCoords.html">ResamplingSpCVCoords</a></code> </p>
-        </td>
-        <td><p>Spatial Cross Validation Resampling</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="ResamplingSpCVEnv.html">ResamplingSpCVEnv</a></code> </p>
-        </td>
-        <td><p>Environmental Block Cross Validation Resampling</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="TaskClassifST.html">TaskClassifST</a></code> </p>
-        </td>
-        <td><p>SpatioTemporal Classification Task</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="TaskRegrST.html">TaskRegrST</a></code> </p>
-        </td>
-        <td><p>SpatioTemporal Regression Task</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="autoplot_spatial_resampling.html">autoplot(<i>&lt;ResamplingSpCVBlock&gt;</i>)</a></code> <code><a href="autoplot_spatial_resampling.html">autoplot(<i>&lt;ResamplingSpCVEnv&gt;</i>)</a></code> <code><a href="autoplot_spatial_resampling.html">autoplot(<i>&lt;ResamplingSpCVBuffer&gt;</i>)</a></code> <code><a href="autoplot_spatial_resampling.html">autoplot(<i>&lt;ResamplingSpCVCoords&gt;</i>)</a></code> <code><a href="autoplot_spatial_resampling.html">autoplot(<i>&lt;ResamplingCV&gt;</i>)</a></code> <code><a href="autoplot_spatial_resampling.html">autoplot(<i>&lt;ResamplingRepeatedCV&gt;</i>)</a></code> <code><a href="autoplot_spatial_resampling.html">autoplot(<i>&lt;ResamplingRepeatedSpCVCoords&gt;</i>)</a></code> <code><a href="autoplot_spatial_resampling.html">autoplot(<i>&lt;ResamplingRepeatedSpCVEnv&gt;</i>)</a></code> <code><a href="autoplot_spatial_resampling.html">autoplot(<i>&lt;ResamplingRepeatedSpCVBlock&gt;</i>)</a></code> </p>
-        </td>
-        <td><p>Visualization of spatial resampling.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mlr_tasks_cookfarm.html">mlr_tasks_cookfarm</a></code> </p>
-        </td>
-        <td><p>Cookfarm Profiles Regression Task</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mlr_tasks_diplodia.html">load_task_diplodia()</a></code> </p>
-        </td>
-        <td><p>Diplodia Classification Task</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mlr_tasks_ecuador.html">load_task_ecuador()</a></code> </p>
-        </td>
-        <td><p>Ecuador Classification Task</p></td>
-      </tr>
-    </tbody>
-    </table>
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p><a href='https://rdrr.io/pkg/R6/man/R6Class.html'>R6::R6Class</a> inheriting from TaskRegr.</p>
+    <h2 class="hasAnchor" id="usage"><a class="anchor" href="#usage"></a>Usage</h2>
+
+    
+<pre><span class='no'>mlr_tasks</span>$<span class='fu'><a href='https://rdrr.io/r/base/get.html'>get</a></span>(<span class='st'>"cookfarm"</span>)
+<span class='fu'>tsk</span>(<span class='st'>"cookfarm"</span>)</pre>
+
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Gasch, C.K., Hengl, T., Gräler, B., Meyer, H., Magney, T., Brown, D.J., 2015.
+Spatio-temporal interpolation of soil water, temperature, and electrical
+conductivity in 3D+T: the Cook Agronomy Farm data set. Spatial Statistics,
+14, pp.70–90.</p>
+<p>Gasch, C.K., D.J. Brown, E.S. Brooks, M. Yourek, M. Poggio, D.R. Cobos, C.S.
+Campbell, 2016? Retroactive calibration of soil moisture sensors using a
+two-step, soil-specific correction. Submitted to Vadose Zone Journal.</p>
+<p>Gasch, C.K., D.J. Brown, C.S. Campbell, D.R. Cobos, E.S. Brooks, M. Chahal,
+M. Poggio, 2016? A field-scale sensor network data set for monitoring and
+modeling the spatial and temporal variation of soil moisture in a dryland
+agricultural field. Submitted to Water Resources Research.</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><a href='https://mlr3misc.mlr-org.com/reference/Dictionary.html'>Dictionary</a> of Tasks: mlr_tasks</p>
+<p><code>as.data.table(mlr_tasks)</code> for a complete table of all (also dynamically created) Tasks.</p>
+<p>Other Task: 
+<code><a href='TaskClassifST.html'>TaskClassifST</a></code>,
+<code><a href='TaskRegrST.html'>TaskRegrST</a></code>,
+<code><a href='mlr_tasks_diplodia.html'>mlr_tasks_diplodia</a></code>,
+<code><a href='mlr_tasks_ecuador.html'>mlr_tasks_ecuador</a></code></p></div>
+
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
